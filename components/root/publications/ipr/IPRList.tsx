@@ -2,7 +2,7 @@ export default function IPRList() {
   return (
     <section className="px-44">
       <div className="pt-24 pb-12">
-        <p className="text-xl text-orange-500">Copyrights</p>
+        <p className="text-xl text-primary">Copyrights</p>
         <div className="mt-3">
           {copyrights.map((ipr) => (
             <div key={ipr.title} className="border-b border-gray-300 py-4">
@@ -23,7 +23,7 @@ export default function IPRList() {
         </div>
       </div>
       <div className="pt-12 pb-24">
-        <p className="text-xl text-orange-500">Patents</p>
+        <p className="text-xl text-primary">Patents</p>
         <div className="mt-3">
           {patents.map((ipr) => (
             <div key={ipr.title} className="border-b border-gray-300 py-4">

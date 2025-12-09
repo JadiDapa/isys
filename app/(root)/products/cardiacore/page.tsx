@@ -12,7 +12,7 @@ export default function InfrastructureTeamPage() {
         description="Mobile phone-based technology that utilizes an AI model to detect precancerous cervical lesions using cervicography data."
         buttonText="Product Home Page"
       />
-      <div className="bg-white px-80 py-24">
+      <div className="  px-80 py-24">
         <figure className="relative aspect-video">
           <Image
             src="https://isysrg.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Frpp4jatp%2Fproduction%2F607727da9985a63ba247b5e41f57ef051440643f-4575x1477.jpg%3Ffit%3Dmax%26auto%3Dformat&w=1920&q=75"

@@ -4,8 +4,8 @@ export default async function PartnersSectionl() {
   const contents = await getPartnerContents();
 
   return (
-    <section className="flex w-full flex-col items-center bg-white px-4 py-16 lg:px-40">
-      <h2 className="mb-10 text-3xl font-bold text-[#F87217]">
+    <section className="flex w-full flex-col items-center  px-4 py-16 lg:px-40">
+      <h2 className="mb-10 text-3xl font-bold text-primary">
         {contents.title}
       </h2>
 

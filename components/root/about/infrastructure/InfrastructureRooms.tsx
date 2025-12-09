@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function InfrastructureRooms() {
   return (
-    <div className="space-y-24 bg-white px-40 py-32">
+    <div className="space-y-24   px-40 py-32">
       <div className="flex items-center gap-6 rounded-xl bg-slate-200 p-4">
         <figure className="relative h-80 w-280 overflow-hidden rounded-lg">
           <Image

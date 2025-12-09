@@ -1,6 +1,6 @@
 export default function MassMediaList() {
   return (
-    <section className="bg-white px-44 py-24">
+    <section className="  px-44 py-24">
       <div className="mt-3">
         {journals.map((journal) => (
           <div key={journal.title} className="border-b border-gray-300 py-4">

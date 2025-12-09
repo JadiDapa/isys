@@ -8,7 +8,7 @@ export default function ActivityCard({
   item: { image: string; date: string; title: string };
 }) {
   return (
-    <Card className="rounded-none border-x-0 border-t-0 border-b border-gray-500 bg-[#111]/60 p-0 text-white">
+    <Card className="rounded-none border-x-0 border-t-0 border-b border-gray-500 bg-black/60 p-0 text-white">
       <CardContent className="flex gap-4 p-0 py-5 lg:p-4">
         <div className="relative size-28 overflow-hidden rounded-md">
           <Image
@@ -19,7 +19,7 @@ export default function ActivityCard({
           />
         </div>
         <div className="flex-1">
-          <div className="mb-1 flex items-center gap-2 text-sm text-[#FF7A00]">
+          <div className="mb-1 flex items-center gap-2 text-sm text-primary">
             <CalendarDays size={16} />
             <span>{item.date}</span>
           </div>

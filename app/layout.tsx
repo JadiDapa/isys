@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "../components/ui/sonner";
 import Providers from "../providers/Providers";
 
-const poppins = Poppins({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "ISys Research Group",
-  description: "ISys Research Group - Universitas Sriwijaya",
+  title: "Channa Sense Researchs",
+  description:
+    "Web development aplikasi iot untuk Inovasi Pemantau dan Kendali Lingkungan 'Channa Sense' untuk Pemijahan Ikan Gabus Sumsel",
 };
 
 export default function RootLayout({
@@ -24,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${poppins.className}`}>
+      <body className={`${montserrat.className}`}>
         <Toaster richColors position="top-right" theme="light" />
         <Providers>
           <main>{children}</main>

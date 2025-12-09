@@ -8,7 +8,7 @@ export default function SignalEcgDatasetPage() {
     <>
       <LeftHeader section="DATASET" title="Pre-Cancer Dataset" />
 
-      <div className="bg-white px-44 py-24">
+      <div className="  px-44 py-24">
         <DatasetCarousel items={dataset} />
       </div>
 

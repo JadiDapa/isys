@@ -6,7 +6,7 @@ export default async function Footer() {
   const contents = await getFooterContents();
 
   return (
-    <footer className="w-full bg-linear-to-b from-white to-orange-100 border-t border-orange-200 pt-16 pb-8 text-gray-700">
+    <footer className="w-full bg-linear-to-b from-white to-amber-100 border-t border-amber-200 pt-16 pb-8 text-gray-700">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Left Section */}
         <div>
@@ -38,19 +38,19 @@ export default async function Footer() {
 
         {/* Address */}
         <div className="text-sm">
-          <h3 className="text-orange-600 font-semibold mb-2">Address</h3>
+          <h3 className="text-primary font-semibold mb-2">Address</h3>
           <p className="mb-4">{contents.address}</p>
 
-          <h3 className="text-orange-600 font-semibold mb-2">Contact</h3>
+          <h3 className="text-primary font-semibold mb-2">Contact</h3>
           <p className="mb-4">{contents.contact}</p>
 
-          <h3 className="text-orange-600 font-semibold mb-2">Opening Hour</h3>
+          <h3 className="text-primary font-semibold mb-2">Opening Hour</h3>
           <p>{contents.open}</p>
         </div>
 
         {/* Links */}
         <div className="text-sm">
-          <h3 className="text-orange-600 font-semibold mb-3">Links</h3>
+          <h3 className="text-primary font-semibold mb-3">Links</h3>
           <ul className="space-y-2">
             {contents.links.map((link, i) => (
               <li key={i}>
@@ -64,7 +64,7 @@ export default async function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-7xl mx-auto px-6 mt-12 flex flex-col md:flex-row items-center justify-between border-t border-orange-200 pt-6">
+      <div className="max-w-7xl mx-auto px-6 mt-12 flex flex-col md:flex-row items-center justify-between border-t pt-6">
         <p className="text-xs text-gray-600">©{contents.copyright}</p>
 
         <div className="flex items-center gap-6 mt-4 md:mt-0">
@@ -136,7 +136,7 @@ async function getFooterContents() {
 
 // Map CMS name → Icon component
 const iconMap: Record<string, JSX.Element> = {
-  Instagram: <Instagram className="w-5 h-5 text-orange-500 cursor-pointer" />,
-  Linkedin: <Linkedin className="w-5 h-5 text-orange-500 cursor-pointer" />,
-  Youtube: <Youtube className="w-5 h-5 text-orange-500 cursor-pointer" />,
+  Instagram: <Instagram className="w-5 h-5 text-primary cursor-pointer" />,
+  Linkedin: <Linkedin className="w-5 h-5 text-primary cursor-pointer" />,
+  Youtube: <Youtube className="w-5 h-5 text-primary cursor-pointer" />,
 };

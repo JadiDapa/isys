@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function InfrastructureItems() {
   return (
-    <div className="bg-white px-40 py-32">
+    <div className="  px-40 py-32">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {infrastructureItems.map((item, i) => (
           <div key={i} className="rounded-xl bg-slate-200 p-4">
@@ -18,7 +18,7 @@ export default function InfrastructureItems() {
             <div className="grid grid-cols-2 gap-3">
               {Object.entries(item.specs).map(([spec, value], j) => (
                 <div key={j} className="">
-                  <p className="text-xs font-light text-orange-500">{spec}:</p>
+                  <p className="text-xs font-light text-primary">{spec}:</p>
                   <p className="text-xs font-light text-gray-500">{value}</p>
                 </div>
               ))}

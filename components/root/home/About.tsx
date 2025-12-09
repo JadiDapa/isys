@@ -5,9 +5,9 @@ export default async function AboutSection() {
   const about = await getAboutContent(); // Server fetch
 
   return (
-    <section className="w-full bg-white px-6 py-20 lg:px-44">
+    <section className="w-full  px-6 py-20 lg:px-44">
       {/* TITLE */}
-      <h2 className="mb-6 text-center text-3xl font-bold text-[#f36f21] lg:mb-12 lg:text-4xl">
+      <h2 className="mb-6 text-center text-3xl font-bold text-primary lg:mb-12 lg:text-4xl">
         {about.title}
       </h2>
 
@@ -36,7 +36,7 @@ export default async function AboutSection() {
           </p>
 
           {/* LINKS */}
-          <div className="flex gap-10 font-medium text-[#f36f21]">
+          <div className="flex gap-10 font-medium text-primary">
             <a
               href={about.link_1.href}
               className="flex items-center gap-2 hover:opacity-70"

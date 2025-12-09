@@ -4,9 +4,9 @@ export default async function ProductsSection() {
   const product = await getProductsContent();
 
   return (
-    <section className="w-full bg-white px-6 py-20 lg:px-40">
+    <section className="w-full  px-6 py-20 lg:px-40">
       <div className="mb-10 text-center">
-        <h3 className="text-2xl lg:text-3xl font-bold text-[#f36f21]">
+        <h3 className="text-2xl lg:text-3xl font-bold text-primary">
           {product.title}
         </h3>
         <h2 className="mt-2 text-4xl font-light lg:text-5xl">

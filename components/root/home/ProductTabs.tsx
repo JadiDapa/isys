@@ -24,7 +24,7 @@ export default function ProductsTabs({
             <TabsTrigger
               key={item.key}
               value={item.key}
-              className="rounded-lg px-6 py-4 data-[state=active]:bg-[#f36f21] data-[state=active]:text-white"
+              className="rounded-lg px-6 py-4 data-[state=active]:bg-primary data-[state=active]:text-white"
             >
               {item.name}
             </TabsTrigger>
@@ -73,13 +73,13 @@ function ProductContent({
         <div className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
           {features.map((f, i) => (
             <div key={i} className="flex items-center gap-2 lg:items-start">
-              <CheckCircle className="mt-1 size-4 text-[#f36f21] lg:size-5" />
+              <CheckCircle className="mt-1 size-4 text-primary lg:size-5" />
               <span className="text-sm text-gray-800 lg:text-base">{f}</span>
             </div>
           ))}
         </div>
 
-        <Button className="rounded-lg border border-gray-300 bg-white px-6 py-3 text-gray-700 hover:bg-gray-100 lg:mt-4 lg:px-12 lg:py-6">
+        <Button className="rounded-lg border bg-white border-gray-300   px-6 py-3 text-gray-700 hover:bg-gray-100 lg:mt-4 lg:px-12 lg:py-6">
           More details
         </Button>
       </div>

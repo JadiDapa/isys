@@ -2,7 +2,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 
 export default function PreviewLink({ url }: { url: string }) {
   return (
-    <div className="bg-white px-44 pt-6 pb-24">
+    <div className="  px-44 pt-6 pb-24">
       <a
         href={url}
         target="_blank"

@@ -99,7 +99,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center">
             <div className="relative h-12 w-12">
               <Image
-                src="https://isysrg.com/unsri.svg"
+                src="/images/logo-polsri.png"
                 alt="University Logo"
                 fill
                 className="object-contain"
@@ -115,7 +115,7 @@ export default function Navbar() {
             </div>
           </Link>
           {/* Divider */}
-          <div className="h-10 w-px bg-white/20" />
+          <div className="h-10 w-px  /20" />
           {/* AIMed */}
           <div className="relative flex items-center gap-2">
             <Image
@@ -132,7 +132,7 @@ export default function Navbar() {
           </div>
 
           {/* Divider */}
-          <div className="h-10 w-px bg-white/20" />
+          <div className="h-10 w-px  /20" />
         </div>
 
         {/* RIGHT SIDE — Menu */}

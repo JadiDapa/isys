@@ -23,7 +23,7 @@ export default async function HeroSection() {
       {/* Content */}
       <div className="relative z-20 mx-auto space-y-6 px-6 py-24 text-white lg:px-44 lg:py-44 lg:pt-64">
         <h1 className="text-5xl font-medium md:text-8xl">
-          {hero.title} <span className="text-orange-400">.</span>
+          {hero.title} <span className="text-primary">.</span>
         </h1>
 
         <p className="max-w-6xl text-sm leading-relaxed lg:text-xl">
@@ -31,13 +31,13 @@ export default async function HeroSection() {
         </p>
 
         <div className="flex gap-4 pt-4">
-          <Button className="rounded-md bg-orange-500 px-6 py-3 font-medium hover:bg-orange-600 lg:px-12 lg:py-6">
+          <Button className="rounded-md bg-primary px-6 py-3 font-medium hover:bg-primary lg:px-12 lg:py-6">
             <Link href={hero.primaryButton.href}>
               {hero.primaryButton.label}
             </Link>
           </Button>
 
-          <Button className="rounded-md bg-white px-6 py-3 font-medium text-black hover:bg-gray-200 lg:px-12 lg:py-6">
+          <Button className="rounded-md bg-white  px-6 py-3 font-medium text-black hover:bg-gray-200 lg:px-12 lg:py-6">
             <Link href={hero.secondaryButton.href}>
               {hero.secondaryButton.label}
             </Link>

@@ -1,9 +1,7 @@
 export default function ProceedingList() {
   return (
     <section className="px-44 py-24">
-      <p className="text-xl text-orange-500">
-        List of International Conferences
-      </p>
+      <p className="text-xl text-primary">List of International Conferences</p>
       <div className="mt-3">
         {proceedings.map((pcd) => (
           <div key={pcd.title} className="border-b border-gray-300 py-4">

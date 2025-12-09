@@ -5,7 +5,7 @@ import ResearcherCard from "./ResearcherCard";
 
 export default function Researchers() {
   return (
-    <div className="bg-white px-44">
+    <div className="  px-44">
       <div className="my-40 flex flex-col items-center">
         <ResearcherCard
           name="Prof. Ir. Siti Nurmaini, M.T., Ph.D."

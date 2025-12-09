@@ -1,7 +1,7 @@
 export default function JournalList() {
   return (
     <section className="px-44 py-24">
-      <p className="text-xl text-orange-500">List Of International Journal</p>
+      <p className="text-xl text-primary">List Of International Journal</p>
       <div className="mt-3">
         {journals.map((journal) => (
           <div key={journal.title} className="border-b border-gray-300 py-4">

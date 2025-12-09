@@ -6,10 +6,8 @@ export default async function DatasetsSection() {
   const contents = await getDatasetContents();
 
   return (
-    <section className="w-full bg-white text-black py-24 px-6 md:px-16 lg:px-40">
-      <h2 className="text-[#FF7A00] text-4xl font-bold mb-4">
-        {contents.title}
-      </h2>
+    <section className="w-full  text-black py-24 px-6 md:px-16 lg:px-40">
+      <h2 className="text-primary text-4xl font-bold mb-4">{contents.title}</h2>
       <p className="text-gray-600 max-w-3xl mb-12">{contents.description}</p>
 
       <div className="flex flex-wrap gap-6 mb-12">
@@ -19,7 +17,7 @@ export default async function DatasetsSection() {
       </div>
 
       <Link href={contents.button.link} className="">
-        <button className="flex items-center  gap-1 text-[#FF7A00] cursor-pointer font-medium hover:opacity-80 transition">
+        <button className="flex items-center  gap-1 text-primary cursor-pointer font-medium hover:opacity-80 transition">
           {contents.button.text} <ChevronRight size={18} />
         </button>
       </Link>

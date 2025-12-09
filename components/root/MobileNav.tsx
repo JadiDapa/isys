@@ -62,7 +62,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ links }) => {
             <div className="mt-8 flex flex-col gap-4">
               <Button
                 variant={"outline"}
-                className="border-background hover:text-foreground text-primary cursor-pointer rounded-md bg-white px-9 hover:bg-white"
+                className="border-background hover:text-foreground text-primary cursor-pointer rounded-md   px-9 hover: "
               >
                 Learn More
               </Button>

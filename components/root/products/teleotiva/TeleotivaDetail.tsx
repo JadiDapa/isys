@@ -4,9 +4,9 @@ import React from "react";
 
 export default function TeleotivaDetail() {
   return (
-    <section className="bg-white px-44 py-24">
+    <section className="  px-44 py-24">
       <div className="space-y-8">
-        <h2 className="text-3xl font-semibold text-orange-500">Details</h2>
+        <h2 className="text-3xl font-semibold text-primary">Details</h2>
         <p className="text-4xl font-semibold">Demo Aplikasi TeleOTIVA</p>
         <div className="aspect-video w-full border-2 border-gray-600" />
       </div>
@@ -15,12 +15,12 @@ export default function TeleotivaDetail() {
         <p className="text-4xl font-semibold">User Manual TeleOTIVA</p>
 
         <div className="flex overflow-hidden rounded-lg">
-          <div className="grid size-12 place-items-center bg-orange-200">
-            <File className="text-orange-500" />
+          <div className="grid size-12 place-items-center bg-red-200">
+            <File className="text-primary" />
           </div>
-          <div className="flex h-12 items-center justify-center gap-4 bg-orange-100 px-6">
+          <div className="flex h-12 items-center justify-center gap-4 bg-red-100 px-6">
             <p>User Manual</p>
-            <Download className="text-orange-500" />
+            <Download className="text-primary" />
           </div>
         </div>
 

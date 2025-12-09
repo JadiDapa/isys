@@ -34,7 +34,7 @@ export default function PartnerCarousel({ partners }: PartnerCarouseProps) {
             key={i}
             className="flex basis-1/2 justify-center lg:basis-1/5"
           >
-            <div className="relative flex h-40 w-60 flex-col items-center justify-center rounded-xl border bg-[#fafafa] p-6 shadow-sm">
+            <div className="relative flex h-40 w-60 flex-col items-center justify-center rounded-xl border bg-gray-100 p-6 shadow-sm">
               <div className="relative mb-3 h-16 w-32">
                 <Image
                   src={p.image}

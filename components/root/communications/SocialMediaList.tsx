@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function SocialMediaList() {
   return (
-    <section className="grid grid-cols-2 gap-6 bg-white px-44 py-24">
+    <section className="grid grid-cols-2 gap-6   px-44 py-24">
       {socialMedia.map((media) => (
         <a
           href={media.url}
           target="_blank"
           key={media.title}
-          className="group block w-full cursor-pointer rounded-lg border-2 p-4 transition hover:border-orange-500 hover:bg-gray-200"
+          className="group block w-full cursor-pointer rounded-lg border-2 p-4 transition hover:border-primary hover:bg-gray-200"
         >
           <figure className="relative h-72 w-full overflow-hidden rounded-md">
             <Image
@@ -20,7 +20,7 @@ export default function SocialMediaList() {
             />
           </figure>
           <div className="space-y-2 py-4">
-            <div className="flex items-center gap-2 text-orange-500">
+            <div className="flex items-center gap-2 text-primary">
               <Calendar size={16} className="" />
               <p className="text-sm">{media.date}</p>
             </div>

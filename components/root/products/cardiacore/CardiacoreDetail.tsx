@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function CardiacoreDetail() {
   return (
-    <section className="bg-white px-44 py-24">
+    <section className="  px-44 py-24">
       <div className="space-y-8">
-        <h2 className="text-3xl font-semibold text-orange-500">Details</h2>
+        <h2 className="text-3xl font-semibold text-primary">Details</h2>
         <ul className="list-disc space-y-2 ps-4">
           <li>Medical Records (Postnatal subject medical record data)</li>
           <li>

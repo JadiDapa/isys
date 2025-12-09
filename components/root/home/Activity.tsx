@@ -10,7 +10,7 @@ export default async function ActivitySection() {
   return (
     <section className="w-full bg-black px-6 py-20 text-white md:px-16 lg:px-40">
       <div className="mb-10 text-center">
-        <h2 className="mb-2 text-xl font-bold text-[#FF7A00] sm:text-2xl lg:text-3xl">
+        <h2 className="mb-2 text-xl font-bold text-primary sm:text-2xl lg:text-3xl">
           {activityContent.title}
         </h2>
         <h1 className="mb-6 text-2xl font-light sm:text-3xl md:text-4xl lg:text-5xl">
@@ -32,7 +32,7 @@ export default async function ActivitySection() {
             />
           </div>
           <div className="mt-4">
-            <div className="mb-1 flex items-center gap-2 text-sm text-[#FF7A00]">
+            <div className="mb-1 flex items-center gap-2 text-sm text-primary">
               <CalendarDays size={16} /> <span>{latestActivity.date}</span>
             </div>
             <h3 className="text-base font-medium sm:text-lg md:text-xl">
@@ -49,7 +49,7 @@ export default async function ActivitySection() {
           <div className="mt-4 text-right">
             <a
               href="#"
-              className="flex items-center justify-end gap-1 text-[#FF7A00] hover:underline"
+              className="flex items-center justify-end gap-1 text-primary hover:underline"
             >
               View more activities →
             </a>
