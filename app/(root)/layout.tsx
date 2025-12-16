@@ -7,7 +7,7 @@ type Props = {
 };
 export default function RootLayout({ children }: Props) {
   return (
-    <section className="bg-background text-foreground overflow-hidden">
+    <section className="bg-background text-foreground overflow-hidden relative">
       <Navbar />
       <div className="">{children}</div>
       <Footer />

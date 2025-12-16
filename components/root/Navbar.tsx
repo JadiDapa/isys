@@ -90,53 +90,35 @@ export default function Navbar() {
   return (
     <NavigationMenu
       viewport={isMobile}
-      className={`z-50 w-full border-b border-white/10 bg-black/60 backdrop-blur transition-all duration-300 ${isFixed ? "fixed top-0" : "absolute lg:top-20"} `}
+      className={`z-50 max-w-none w-full border-b border-white/10 bg-black/60 backdrop-blur transition-all duration-300 ${isFixed ? "fixed left-0  top-0" : "absolute left-0 lg:top-20"}`}
     >
-      <div className="flex items-center justify-between px-6 lg:px-44">
+      <div className="flex items-center justify-between px-6 lg:px-44 w-full">
         {/* LEFT SIDE — Logos */}
         <div className="flex items-center gap-6">
           {/* Uni Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative h-12 w-12">
+          <Link href="/" className="flex items-center gap-6">
+            <figure className="relative size-14">
               <Image
                 src="/images/logo-polsri.png"
-                alt="University Logo"
+                alt="Polsri Logo"
                 fill
                 className="object-contain"
               />
-            </div>
-            <div className="relative h-10 w-32">
-              <Image
-                src="https://isysrg.com/_next/image?url=%2Fassets%2Fimages%2Faimed-white.png&w=828&q=75"
-                alt="University Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </Link>
-          {/* Divider */}
-          <div className="h-10 w-px  /20" />
-          {/* AIMed */}
-          <div className="relative flex items-center gap-2">
-            <Image
-              src="https://isysrg.com/isysrg.svg"
-              alt="AIMed Logo"
-              width={32}
-              height={32}
-              className="object-contain"
-            />
-            <div className="flex items-end gap-1">
-              <p className="text-3xl text-white italic">ISys</p>
-              <p className="text-[10px] text-white">Research Group</p>
-            </div>
-          </div>
+            </figure>
 
-          {/* Divider */}
-          <div className="h-10 w-px  /20" />
+            <figure className="relative h-24 w-30">
+              <Image
+                src="/images/logo.png"
+                alt="Polsri Logo"
+                fill
+                className="object-contain object-center"
+              />
+            </figure>
+          </Link>
         </div>
 
         {/* RIGHT SIDE — Menu */}
-        <NavigationMenuList className="hidden items-center gap-0 lg:flex">
+        <NavigationMenuList className="hidden items-center w-full gap-0 lg:flex">
           {menu.map((item, index) => (
             <NavigationMenuItem
               key={index}
@@ -161,8 +143,6 @@ export default function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
           ))}
-
-          <div className="border-l border-white/10 px-0"></div>
         </NavigationMenuList>
       </div>
     </NavigationMenu>
