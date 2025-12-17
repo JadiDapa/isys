@@ -10,25 +10,22 @@ export default async function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Left Section */}
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <Image
-              src="https://isysrg.com/_next/image?url=%2Fassets%2Fimages%2Faimed-black.png&w=828&q=75"
-              alt="AIMed"
-              width={120}
-              height={60}
-            />
-            <div className="relative flex gap-2 items-center">
+          <div className="flex items-center gap-6 mb-4">
+            <figure className="relative size-20 ">
               <Image
-                src="https://isysrg.com/isysrg.svg"
-                alt="AIMed Logo"
-                width={32}
-                height={32}
+                src="/images/logo-polsri.png"
+                alt="Chana Sense Research"
+                fill
+                className="object-center object-contain"
+              />
+            </figure>
+            <div className="relative h-20 w-36">
+              <Image
+                src="/images/logo.png"
+                alt="Chana Sense Research Logo"
+                fill
                 className="object-contain"
               />
-              <div className="flex gap-1 items-end">
-                <p className=" italic text-3xl font-semibold">ISys</p>
-                <p className=" text-[10px]">Research Group</p>
-              </div>
             </div>
           </div>
           <p className="text-sm leading-relaxed max-w-md">
@@ -89,12 +86,12 @@ export default async function Footer() {
 async function getFooterContents() {
   return {
     description:
-      "The AIMed Center of Excellence aims to develop AI-based technological solutions for the early screening (detection) of non-communicable diseases that are accurate, efficient, ethical, and usable by non-specialist healthcare workers in primary care settings, through a mobile platform integrated with telemedicine.",
+      "The Chana Sense Research Center of Excellence aims to develop AI-based technological solutions for the early screening (detection) of non-communicable diseases that are accurate, efficient, ethical, and usable by non-specialist healthcare workers in primary care settings, through a mobile platform integrated with telemedicine.",
     address:
       "Jl. Srijaya Negara, Bukit Besar, Kec. Ilir Barat I, Kota Palembang, Sumatera Selatan 30128. Universitas Sriwijaya",
     contact: "(+62) 81224147003",
     open: "9 AM—4 PM every day",
-    copyright: "2025 ISys Research Group",
+    copyright: "2025 Chana Sense Research Research Group",
     links: [
       {
         name: "Research Team",

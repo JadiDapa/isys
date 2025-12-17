@@ -1,4 +1,21 @@
-export default function IPRList() {
+import { getPayload } from "payload";
+import config from "@/payload.config";
+
+export default async function IPRLisst() {
+  const payload = await getPayload({ config });
+
+  const { docs: copyrights } = await payload.find({
+    collection: "copyrights",
+    sort: "-year",
+    limit: 50,
+  });
+
+  const { docs: patents } = await payload.find({
+    collection: "patents",
+    sort: "-year",
+    limit: 50,
+  });
+
   return (
     <section className="px-44">
       <div className="pt-24 pb-12">
@@ -47,54 +64,54 @@ export default function IPRList() {
   );
 }
 
-const copyrights = [
-  {
-    title:
-      "Algoritma Interpretasi Dini Diabetes Melitus Tipe-2 Berbasis  Epidemiologi Akantosis Nigrikans Dengan Model Kecerdasan  Artifisial",
-    url: "https://drive.google.com/file/d/1bf78wntfZS1wB_BLCbv_gIKEOwhS0xUE/view?usp=sharing",
-    code: "EC002025170132",
-    date: "4 November 2025",
-    status: "Granted",
-  },
-  {
-    title:
-      "Algoritma Pendeteksian Otomatis ST-Elevasi pada 12-lead Sinyal Elektrokardiogram berbasis Deep Learning",
-    url: "https://www.sciencedirect.com/science/article/pii/S2589004225005498",
-    code: "EC002024199845",
-    date: "2025",
-    status: "Granted",
-  },
-  {
-    title: "Algoritma Komputer AI-Garuda",
-    url: "https://www.techscience.com/cmc/online/detail/22349",
-    code: "EC002024187109",
-    date: "2025",
-    status: "Granted",
-  },
-];
+// const copyrights = [
+//   {
+//     title:
+//       "Algoritma Interpretasi Dini Diabetes Melitus Tipe-2 Berbasis  Epidemiologi Akantosis Nigrikans Dengan Model Kecerdasan  Artifisial",
+//     url: "https://drive.google.com/file/d/1bf78wntfZS1wB_BLCbv_gIKEOwhS0xUE/view?usp=sharing",
+//     code: "EC002025170132",
+//     date: "4 November 2025",
+//     status: "Granted",
+//   },
+//   {
+//     title:
+//       "Algoritma Pendeteksian Otomatis ST-Elevasi pada 12-lead Sinyal Elektrokardiogram berbasis Deep Learning",
+//     url: "https://www.sciencedirect.com/science/article/pii/S2589004225005498",
+//     code: "EC002024199845",
+//     date: "2025",
+//     status: "Granted",
+//   },
+//   {
+//     title: "Algoritma Komputer AI-Garuda",
+//     url: "https://www.techscience.com/cmc/online/detail/22349",
+//     code: "EC002024187109",
+//     date: "2025",
+//     status: "Granted",
+//   },
+// ];
 
-const patents = [
-  {
-    title: "APLIKASI TeleOTIVA: TELEMEDISIN DAN OTOMATISASI IVA",
-    url: "https://drive.google.com/file/d/1cBBTn5gxZfNM9qdzyK21XFKzWg0OWXy3/view?usp=sharing",
-    code: "P00202508731",
-    date: "4 November 2025",
-    status: "Granted",
-  },
-  {
-    title:
-      "Metode Convolutional Neural Network pada Sistem Interpretasi Cerdas Ekokardiografi Janin berusia 18-22 Minggu",
-    url: "https://www.sciencedirect.com/science/article/pii/S2589004225005498",
-    code: "IDS000008374",
-    date: "2025",
-    status: "Granted",
-  },
-  {
-    title:
-      "Aplikasi TeleOTIVA untuk Pendeteksi Dini Lesi PRA-KANKER Serviks Otomatis Berbasis Kecerdasan Buatan",
-    url: "https://www.techscience.com/cmc/online/detail/22349",
-    code: "S00202404682",
-    date: "2025",
-    status: "Under Review",
-  },
-];
+// const patents = [
+//   {
+//     title: "APLIKASI TeleOTIVA: TELEMEDISIN DAN OTOMATISASI IVA",
+//     url: "https://drive.google.com/file/d/1cBBTn5gxZfNM9qdzyK21XFKzWg0OWXy3/view?usp=sharing",
+//     code: "P00202508731",
+//     date: "4 November 2025",
+//     status: "Granted",
+//   },
+//   {
+//     title:
+//       "Metode Convolutional Neural Network pada Sistem Interpretasi Cerdas Ekokardiografi Janin berusia 18-22 Minggu",
+//     url: "https://www.sciencedirect.com/science/article/pii/S2589004225005498",
+//     code: "IDS000008374",
+//     date: "2025",
+//     status: "Granted",
+//   },
+//   {
+//     title:
+//       "Aplikasi TeleOTIVA untuk Pendeteksi Dini Lesi PRA-KANKER Serviks Otomatis Berbasis Kecerdasan Buatan",
+//     url: "https://www.techscience.com/cmc/online/detail/22349",
+//     code: "S00202404682",
+//     date: "2025",
+//     status: "Under Review",
+//   },
+// ];

@@ -1,4 +1,15 @@
-export default function ProceedingList() {
+import { getPayload } from "payload";
+import config from "@/payload.config";
+
+export default async function ProceedingList() {
+  const payload = await getPayload({ config });
+
+  const { docs: proceedings } = await payload.find({
+    collection: "proceedings",
+    sort: "-year",
+    limit: 50,
+  });
+
   return (
     <section className="px-44 py-24">
       <p className="text-xl text-primary">List of International Conferences</p>
@@ -22,38 +33,38 @@ export default function ProceedingList() {
   );
 }
 
-const proceedings = [
-  {
-    title:
-      "Experimented Multi-Objective Teaching-Leaming-Based Optimization for Medical Data Analysis",
-    url: "https://ieeexplore.ieee.org/abstract/document/10652159",
-    publication:
-      "2024 International Conference on Data Science and Its Applications (ICoDSA)",
-    year: "2024",
-  },
-  {
-    title:
-      "Deep Learning for Fetal QRS-complex Classification in Noninvasive Fetal Electrocardiogram",
-    url: "https://ieeexplore.ieee.org/abstract/document/10277016",
-    publication:
-      "2023 International Conference on Data Science and Its Applications (ICoDSA)",
-    year: "2023",
-  },
+// const proceedings = [
+//   {
+//     title:
+//       "Experimented Multi-Objective Teaching-Leaming-Based Optimization for Medical Data Analysis",
+//     url: "https://ieeexplore.ieee.org/abstract/document/10652159",
+//     publication:
+//       "2024 International Conference on Data Science and Its Applications (ICoDSA)",
+//     year: "2024",
+//   },
+//   {
+//     title:
+//       "Deep Learning for Fetal QRS-complex Classification in Noninvasive Fetal Electrocardiogram",
+//     url: "https://ieeexplore.ieee.org/abstract/document/10277016",
+//     publication:
+//       "2023 International Conference on Data Science and Its Applications (ICoDSA)",
+//     year: "2023",
+//   },
 
-  {
-    title:
-      "Yolact-based Approach for Real-Time Fetal Heart SegmentationYolact-based Approach for Real-Time Fetal Heart Segmentation",
-    url: "https://ieeexplore.ieee.org/abstract/document/10277564",
-    publication:
-      "2023 International Conference on Data Science and Its Applications (ICoDSA)",
-    year: "2023",
-  },
-  {
-    title:
-      "A Deep Learning Approach for Automated Prediction of Cardiac Arrest from Vital Sign Data of Intensive Care Unit Patients",
-    url: "https://ieeexplore.ieee.org/abstract/document/10277367  ",
-    publication:
-      "2023 International Conference on Data Science and Its Applications (ICoDSA) - 2023",
-    year: "2023",
-  },
-];
+//   {
+//     title:
+//       "Yolact-based Approach for Real-Time Fetal Heart SegmentationYolact-based Approach for Real-Time Fetal Heart Segmentation",
+//     url: "https://ieeexplore.ieee.org/abstract/document/10277564",
+//     publication:
+//       "2023 International Conference on Data Science and Its Applications (ICoDSA)",
+//     year: "2023",
+//   },
+//   {
+//     title:
+//       "A Deep Learning Approach for Automated Prediction of Cardiac Arrest from Vital Sign Data of Intensive Care Unit Patients",
+//     url: "https://ieeexplore.ieee.org/abstract/document/10277367  ",
+//     publication:
+//       "2023 International Conference on Data Science and Its Applications (ICoDSA) - 2023",
+//     year: "2023",
+//   },
+// ];

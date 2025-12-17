@@ -6,9 +6,9 @@ export default function InfrastructureTeamPage() {
   return (
     <>
       <MiddleHeader
-        section="AIMed CoE"
+        section="Chana Sense Research CoE"
         title="Infrastructure"
-        description="ISysRG has the infrastructure to support and provide the platform of research. The infrastructure is as follows:"
+        description="Chana Sense ResearchRG has the infrastructure to support and provide the platform of research. The infrastructure is as follows:"
       />
       <InfrastructureRooms />
       <InfrastructureItems />

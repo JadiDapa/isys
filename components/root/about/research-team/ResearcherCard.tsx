@@ -28,8 +28,8 @@ export default function ResearcherCard({
         />
       </div>
       <div className="">
-        <p>{name}</p>
-        <p>{title}</p>
+        <p className="font-semibold text-xl text-primary">{name}</p>
+        <p className=" font-medium">{title}</p>
         {batch && <Badge>{batch}</Badge>}
         {desc && <p>{desc}</p>}
       </div>

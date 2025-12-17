@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
+import { withPayload } from "@payloadcms/next/withPayload";
 
 const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
   images: {
     remotePatterns: [
       {
@@ -18,4 +20,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig);

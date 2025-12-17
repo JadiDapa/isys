@@ -1,6 +1,11 @@
 import { CheckCircle } from "lucide-react";
 
-export default function ProductFeatures({ features }: { features: string[] }) {
+export default function ProductFeatures({
+  features,
+}: {
+  features: { id: string; feature: string }[];
+}) {
+  console.log(features);
   return (
     <section className="bg-gray-900 px-44 py-24">
       <h2 className="text-center text-3xl font-semibold text-primary">
@@ -8,7 +13,7 @@ export default function ProductFeatures({ features }: { features: string[] }) {
       </h2>
       <div className="mt-12 grid grid-cols-2 gap-4">
         {features.map((feature) => (
-          <FeatureItem feature={feature} key={feature} />
+          <FeatureItem feature={feature.feature} key={feature.id} />
         ))}
       </div>
     </section>

@@ -1,4 +1,15 @@
-export default function BookList() {
+import { getPayload } from "payload";
+import config from "@/payload.config";
+
+export default async function BookList() {
+  const payload = await getPayload({ config });
+
+  const { docs: books } = await payload.find({
+    collection: "books",
+    sort: "-year",
+    limit: 50,
+  });
+
   return (
     <section className="px-44 py-24">
       <p className="text-xl text-primary">List Of Books</p>
@@ -25,19 +36,19 @@ export default function BookList() {
   );
 }
 
-const books = [
-  {
-    title: "Pengolahan Citra Medis Berbasis Kecerdasan Artifisial",
-    url: "https://isysrg.com/books#",
-    publisher: "UNSRI Press",
-    ISBN: "978-623-399-163-6",
-    year: "2023",
-  },
-  {
-    title: "Pengenalan Deep Learning dan Implementasinya",
-    url: "https://isysrg.com/books#",
-    publisher: "UNSRI Press",
-    ISBN: "978-979-587-995-4",
-    year: "2021",
-  },
-];
+// const books = [
+//   {
+//     title: "Pengolahan Citra Medis Berbasis Kecerdasan Artifisial",
+//     url: "https://isysrg.com/books#",
+//     publisher: "UNSRI Press",
+//     ISBN: "978-623-399-163-6",
+//     year: "2023",
+//   },
+//   {
+//     title: "Pengenalan Deep Learning dan Implementasinya",
+//     url: "https://isysrg.com/books#",
+//     publisher: "UNSRI Press",
+//     ISBN: "978-979-587-995-4",
+//     year: "2021",
+//   },
+// ];

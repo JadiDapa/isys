@@ -1,11 +1,25 @@
 import Image from "next/image";
 import { CalendarDays } from "lucide-react";
 import ActivityCard from "./ActivityCard";
+import { getPayload } from "payload";
+import config from "@/payload.config";
 
 export default async function ActivitySection() {
   const activityContent = await getActivitiesContent();
 
-  const latestActivity = activityContent.activities.slice(-1)[0];
+  const payload = await getPayload({ config });
+
+  const { docs: activities } = await payload.find({
+    collection: "activities", // make sure slug = "activities"
+    sort: "-date",
+    limit: 4,
+  });
+
+  const latestActivity = activities[0];
+
+  if (!activityContent || !latestActivity) {
+    return null;
+  }
 
   return (
     <section className="w-full bg-black px-6 py-20 text-white md:px-16 lg:px-40">
@@ -23,9 +37,9 @@ export default async function ActivitySection() {
 
       <div className="flex flex-col items-start gap-10 lg:flex-row">
         <div className="lg:col-span-2">
-          <div className="relative h-60 w-full overflow-hidden rounded-xl lg:h-[450px]">
+          <div className="relative h-60 w-full min-w-3xl overflow-hidden rounded-xl lg:h-[450px]">
             <Image
-              src={latestActivity.image}
+              src={latestActivity.image.url}
               alt={latestActivity.title}
               fill
               className="object-cover"
@@ -42,7 +56,7 @@ export default async function ActivitySection() {
         </div>
 
         <div className="">
-          {activityContent.activities.slice(-4, -1).map((item) => (
+          {activities.slice(1).map((item) => (
             <ActivityCard key={item.title} item={item} />
           ))}
 
@@ -75,7 +89,8 @@ async function getActivitiesContent() {
       },
       {
         date: "August 28, 2025",
-        title: "AIMed CoE Dukung Eliminasi Kanker Serviks Indonesia",
+        title:
+          "Chana Sense Research CoE Dukung Eliminasi Kanker Serviks Indonesia",
         image:
           "https://isysrg.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Frpp4jatp%2Fproduction%2Fe9ace77d6a7f84858d48fa7fadde6ce2ead2f145-4160x3120.jpg%3Ffit%3Dmax%26auto%3Dformat&w=256&q=75",
       },

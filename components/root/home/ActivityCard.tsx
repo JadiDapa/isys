@@ -12,7 +12,7 @@ export default function ActivityCard({
       <CardContent className="flex gap-4 p-0 py-5 lg:p-4">
         <div className="relative size-28 overflow-hidden rounded-md">
           <Image
-            src={item.image}
+            src={item.image.url}
             alt="Activity"
             fill
             className="object-cover"

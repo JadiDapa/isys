@@ -1,5 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { getPayload } from "payload";
+import config from "@/payload.config";
 
 export default async function Publications() {
   const activityContent = await getPublicationContents();
@@ -28,9 +30,9 @@ export default async function Publications() {
               </div>
             </div>
 
-            <Link href={activityContent.button.link}>
+            <Link href={`/publications/${item.slug}`}>
               <button className="flex items-center gap-1 text-gray-700 transition hover:text-primary">
-                {activityContent.button.text} <ChevronRight size={18} />
+                Explore <ChevronRight size={18} />
               </button>
             </Link>
           </div>
@@ -41,19 +43,62 @@ export default async function Publications() {
 }
 
 async function getPublicationContents() {
+  const payload = await getPayload({ config });
+
+  const [journals, proceedings, copyrights, patents, books] = await Promise.all(
+    [
+      payload.find({
+        collection: "journals",
+        limit: 0,
+      }),
+      payload.find({
+        collection: "proceedings",
+        limit: 0,
+      }),
+      payload.find({
+        collection: "copyrights",
+        limit: 0,
+      }),
+      payload.find({
+        collection: "copyrights",
+        limit: 0,
+      }),
+      payload.find({
+        collection: "patents",
+        limit: 0,
+      }),
+      payload.find({
+        collection: "books",
+        limit: 0,
+      }),
+    ]
+  );
+
   return {
     title: "Publications",
     description:
       "Explore our latest research contributions and publications on intelligent systems.",
     publications: [
-      { count: 44, label: "International Journals" },
-      { count: 10, label: "International Conferences (Proceedings)" },
-      { count: 16, label: "Intellectual Property Rights (IPR)" },
-      { count: 2, label: "Books" },
+      {
+        count: journals.totalDocs,
+        label: "International Journals",
+        slug: "journals",
+      },
+      {
+        count: proceedings.totalDocs,
+        label: "International Conferences (Proceedings)",
+        slug: "proceedings",
+      },
+      {
+        count: copyrights.totalDocs + patents.totalDocs,
+        label: "Intellectual Property Rights (IPR)",
+        slug: "ipr",
+      },
+      {
+        count: books.totalDocs,
+        label: "Books",
+        slug: "books",
+      },
     ],
-    button: {
-      text: "Explore Publications",
-      link: "/publications",
-    },
   };
 }

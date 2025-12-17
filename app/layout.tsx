@@ -12,24 +12,22 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Channa Sense Researchs",
   description:
-    "Web development aplikasi iot untuk Inovasi Pemantau dan Kendali Lingkungan 'Channa Sense' untuk Pemijahan Ikan Gabus Sumsel",
+    "Web development aplikasi iot untuk Inovasi Pemantau dan Kendali Lingkungan 'Channa Sense' untuk Pemijahan Ikan Gabus Sumsel",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${montserrat.className}`}>
+      <body className={montserrat.className}>
         <Toaster richColors position="top-right" theme="light" />
-        <Providers>
-          <main>{children}</main>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

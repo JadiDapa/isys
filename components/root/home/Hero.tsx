@@ -52,7 +52,7 @@ async function getHeroContent() {
   return {
     title: "We Collaborate",
     description:
-      "The Artificial Intelligence-Medical Center of Excellence (AIMed CoE) is a leading center of excellence initiated by Universitas Sriwijaya, Indonesia. It houses Intelligent System research group (ISysRG), which is dedicated to advancing the field of artificial intelligence in medicine through interdisciplinary collaboration and innovation. AIMed CoE aims to develop AI-based technological solutions for the arly screening (detection) of non-communicable diseases that are accurate, efficient, ethical, and usable by non-specialist healthcare workers in primary care settings, through a mobile platform integrated with telemedicine.",
+      "Chana Sense Research is a leading center of excellence initiated by Sriwijaya Politeknik, Indonesia. Dedicated to advancing the field of artificial intelligence in medicine through interdisciplinary collaboration and innovation. Chana Sense aims to develop AI-based technological solutions for the arly screening (detection) of non-communicable diseases that are accurate, efficient, ethical, and usable by non-specialist healthcare workers in primary care settings, through a mobile platform integrated with telemedicine.",
     image:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1169&auto=format&fit=crop",
     primaryButton: { label: "About Us", href: "/about/research-team" },

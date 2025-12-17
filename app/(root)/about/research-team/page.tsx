@@ -5,7 +5,7 @@ export default function ResearchTeamPage() {
   return (
     <>
       <MiddleHeader
-        section="AIMed CoE"
+        section="Chana Sense Research CoE"
         title="Research Team"
         description="Meet the dedicated members of our research team, organized to foster collaboration and innovation."
       />

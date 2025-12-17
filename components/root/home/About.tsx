@@ -99,13 +99,13 @@ async function getAboutContent() {
     image_1:
       "https://isysrg.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Frpp4jatp%2Fproduction%2Facf175eacda29173c113713e0b4a511f2cfba7b7-1024x1024.jpg&w=1920&q=75",
     description_1:
-      "The AIMed Center of Excellence primarily involves developing software, applications, and systems to support medical interpretation, with a focus on medical signal and image processing, medical pattern recognition, and medical record data mining techniques.",
+      "The Chana Sense Research Center of Excellence primarily involves developing software, applications, and systems to support medical interpretation, with a focus on medical signal and image processing, medical pattern recognition, and medical record data mining techniques.",
     description_2:
-      "The AIMed Center of Excellence creates intelligent systems across various fields, including computer systems, biomedicine, natural language processing, and others.",
+      "The Chana Sense Research Center of Excellence creates intelligent systems across various fields, including computer systems, biomedicine, natural language processing, and others.",
     link_1: { label: "Research Team", href: "/about/research-team" },
     link_2: { label: "Infrastructure", href: "/about/infrastructure" },
     sdg_text_1:
-      "The AIMed Center of Excellence supports SDG 3 (Good Health and Well-being) by developing AI-driven solutions better disease detection and healthcare delivery.",
+      "The Chana Sense Research Center of Excellence supports SDG 3 (Good Health and Well-being) by developing AI-driven solutions better disease detection and healthcare delivery.",
     sdg_text_2:
       "It also contributes to SDG 9 (Industry, Innovation andInfrastructure) by fostering technological innovation throughresearch in intelligent systems, promoting sustainable healthcareinfrastructure, and collaborating with industry to accelerate theadoption of cutting-edge technologies.",
     sdg_image_1:
